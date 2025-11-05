@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Success | RentItAll</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .content {
+      text-align: center;
+      margin-top: 4rem;
+    }
+    .card {
+      max-width: 400px;
+      margin: 2rem auto;
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+      background: #fff;
+    }
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: .8rem;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="logo">RentItAll</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="items.html">Items</a>
+      <a href="add.html">Add Listing</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <section class="content">
+    <h2>🎉 Payment Successful!</h2>
+    <p style="font-size: 1.2rem; margin: 1rem 0;">Thank you for renting with <strong>RentItAll</strong>.</p>
+
+    <div class="card" id="successCard" style="display: none;">
+      <img id="successImage" src="" alt="Rented Item">
+      <h3 id="successItem"></h3>
+      <p id="successPrice"></p>
+    </div>
+
+    <div id="noPayment" style="display: none;">
+      <h2>❌ No payment found</h2>
+      <p>Please go back and rent an item.</p>
+    </div>
+
+    <a href="index.html"><button>Go Back to Home</button></a>
+  </section>
+
+  <footer>
+    <p>© 2025 RentItAll. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const rentedItem = JSON.parse(localStorage.getItem("rentedItem"));
+    const successCard = document.getElementById("successCard");
+    const noPayment = document.getElementById("noPayment");
+
+    if (rentedItem) {
+      document.getElementById("successItem").textContent = rentedItem.title;
+      document.getElementById("successPrice").textContent = "You paid ₹" + rentedItem.price + " for this rental.";
+      document.getElementById("successImage").src = rentedItem.image;
+
+      successCard.style.display = "block";
+      noPayment.style.display = "none";
+
+      // Clear after showing to prevent repetition
+      localStorage.removeItem("rentedItem");
+    } else {
+      successCard.style.display = "none";
+      noPayment.style.display = "block";
+    }
+  </script>
+</body>
+</html>

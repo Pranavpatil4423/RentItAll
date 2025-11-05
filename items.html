@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentItAll | Items</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo">RentItAll</h1>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="items.html">Items</a>
+      <a href="add.html">Add Listing</a>
+      <a href="about.html">About</a>
+      <a href="login.html" id="loginLink">Login</a>
+      <a href="#" id="logoutLink" style="display:none;">Logout</a>
+    </nav>
+  </header>
+
+  <section class="content">
+    <h2 id="pageTitle">Available Rentals</h2>
+    <div class="grid" id="itemList"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 RentItAll. All rights reserved.</p>
+  </footer>
+
+  <!-- ✅ Add this line to make Razorpay work -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <!-- Then your custom script -->
+  <script src="script.js"></script>
+</body>
+</html>

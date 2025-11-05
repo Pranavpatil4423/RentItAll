@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Listing | RentItAll</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .form-container {
+      max-width: 500px;
+      margin: 3rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .form-container label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+    }
+    .form-container input,
+    .form-container select {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+    .form-container button {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .form-container button:hover {
+      background-color: #45a049;
+    }
+    #preview {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="logo">RentItAll</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="items.html">Items</a>
+      <a href="add.html" class="active">Add Listing</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <section class="content">
+    <div class="form-container">
+      <h2>Rent Out Your Product</h2>
+      <form id="addForm">
+        <label for="title">Item Name</label>
+        <input type="text" id="title" placeholder="Enter item name" required>
+
+        <label for="category">Category</label>
+        <select id="category" required>
+          <option value="">Select category</option>
+          <option value="Cars">Cars</option>
+          <option value="Tools">Tools</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Clothes">Clothes</option>
+          <option value="Furniture">Furniture</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="price">Price per day (₹)</label>
+        <input type="number" id="price" placeholder="Enter price" required>
+
+        <label for="imageFile">Upload Image</label>
+        <input type="file" id="imageFile" accept="image/*" required>
+
+        <img id="preview" alt="Preview">
+
+        <button type="submit">Add My Listing</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 RentItAll. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

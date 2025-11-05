@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | RentItAll</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo">RentItAll</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="items.html">Items</a>
+      <a href="add.html">Add Listing</a>
+      <a href="about.html">About</a>
+      <a href="login.html" id="loginLink">Login</a>
+      <a href="#" id="logoutLink" style="display:none;">Logout</a>
+    </nav>
+  </header>
+
+  <section class="content" style="text-align:center;">
+    <h2>Welcome Back!</h2>
+    <form id="loginForm" style="margin:1rem auto;">
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don’t have an account? <a href="signup.html">Sign up</a>.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 RentItAll. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

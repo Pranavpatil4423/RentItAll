@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentItAll | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1 class="logo">RentItAll</h1>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="items.html">Items</a>
+      <a href="add.html">Add Listing</a>
+      <a href="about.html">About</a>
+      <a href="login.html" id="loginLink">Login</a>
+      <a href="#" id="logoutLink" style="display:none;">Logout</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h2>Rent Anything You Need, Anytime!</h2>
+    <input type="text" id="searchBox" placeholder="Search for cars, tools, dresses...">
+  </section>
+
+  <!-- CATEGORIES SECTION -->
+  <section class="categories">
+    <h3>Popular Categories</h3>
+    <div class="grid">
+      <div class="card category" data-category="Cars">Cars</div>
+      <div class="card category" data-category="Tools">Tools</div>
+      <div class="card category" data-category="Electronics">Electronics</div>
+      <div class="card category" data-category="Clothes">Clothes</div>
+      <div class="card category" data-category="Furniture">Furniture</div>
+    </div>
+  </section>
+
+  <!-- FEATURED RENTALS -->
+  <section class="featured">
+    <h3>Featured Rentals</h3>
+    <div class="grid" id="featuredItems"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 RentItAll. All rights reserved.</p>
+  </footer>
+
+  <!-- ✅ Razorpay Integration -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
